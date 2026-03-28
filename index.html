@@ -1,216 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sasikumar C — Flutter Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sasikumar C — Flutter Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
-<button id="themeBtn" title="Toggle light/dark theme">☀️</button>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <button id="themeBtn" title="Toggle light/dark theme">☀️</button>
 
-<!-- ════════ NAV ════════ -->
-<nav>
-  <a href="#" class="nav-logo">SK<em>.</em></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact" class="nav-hire">Hire Me</a></li>
-  </ul>
-</nav>
+  <!-- ════════ NAV ════════ -->
+  <nav>
+    <a href="#" class="nav-logo">SK<em>.</em></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact" class="nav-hire">Hire Me</a></li>
+    </ul>
+  </nav>
 
-<!-- ════════ HERO ════════ -->
-<section id="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-orb orb1"></div>
-  <div class="hero-orb orb2"></div>
-  <div class="hero-orb orb3"></div>
+  <!-- ════════ HERO ════════ -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+    <div class="hero-orb orb3"></div>
 
-  <div class="hero-content">
-    <p class="hero-greeting"><span class="wave">👋</span>&nbsp; Hey there, I'm</p>
-    <h1 class="hero-name">Sasi<span class="stroke">kumar</span><br/>C.</h1>
-    <p class="hero-role"><b>Flutter &amp; Mobile App Developer</b>&nbsp;·&nbsp;Android &amp; iOS</p>
-    <p class="hero-desc">I build fast, cross-platform mobile apps using Flutter &amp; Dart. Currently at Syncfusion shipping BoldSign — an enterprise e-signature product used by thousands of businesses worldwide.</p>
-    <div class="hero-ctas">
-      <a href="#projects" class="btn-glow">
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h16"/></svg>View My Work
-      </a>
-      <a href="#contact" class="btn-ghost">
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Let's Talk
-      </a>
-      <a href="Sasikumar_C_Resume.docx" class="btn-ghost">
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2v10m0 0l-3-3m3 3l3-3M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/></svg>Resume
-      </a>
-    </div>
-    <div class="hero-stats-strip">
-      <div class="h-stat"><div class="h-stat-n">2.5<em>+</em></div><div class="h-stat-l">Years Exp</div></div>
-      <div class="h-stat"><div class="h-stat-n">5<em>+</em></div><div class="h-stat-l">Apps Shipped</div></div>
-      <div class="h-stat"><div class="h-stat-n">2<em>x</em></div><div class="h-stat-l">Platforms</div></div>
-    </div>
-  </div>
-
-  <!-- Isometric Flutter builder animation -->
-  <canvas id="heroCanvas" width="420" height="480" aria-hidden="true"></canvas>
-
-  <div class="hero-scroll">
-    <div class="scroll-line-anim"></div>
-    <span class="scroll-lbl">Scroll</span>
-  </div>
-</section>
-
-<!-- ════════ ABOUT ════════ -->
-<section id="about">
-  <div class="divider-row"><div class="div-line"></div><span class="div-label">01 / About</span><div class="div-line"></div></div>
-  <div class="about-wrap rv">
-    <div>
-      <div class="eyebrow">Who I Am</div>
-      <h2 class="stitle">Developer who ships<br/>real products</h2>
-      <div class="about-copy">
-        <p>I'm a <strong>Flutter developer</strong> with <span class="hl">2.5 years of professional experience</span> building cross-platform mobile applications at Syncfusion — one of India's leading product software companies.</p>
-        <p>My day job is working on <strong>BoldSign</strong>, an enterprise e-signature platform on Android &amp; iOS. Working in a real product team has taught me to write code that scales, think beyond features, and care deeply about the end user.</p>
-        <p>Outside work, I build independently. <span class="hl">xPen</span> is my personal finance app built solo in Flutter — ready to launch on Android. I also build web apps with React, meaning I work across both mobile and web.</p>
-        <p>I'm now channelling that discipline into <strong>freelance work</strong> — helping people bring their app ideas to life, professionally.</p>
+    <div class="hero-content">
+      <p class="hero-greeting"><span class="wave">👋</span>&nbsp; Hey there, I'm</p>
+      <h1 class="hero-name">Sasi<span class="stroke">kumar</span><br />C.</h1>
+      <p class="hero-role"><b>Flutter &amp; Mobile App Developer</b>&nbsp;·&nbsp;Android &amp; iOS</p>
+      <p class="hero-desc">I build fast, cross-platform mobile apps using Flutter &amp; Dart. Currently at Syncfusion
+        shipping BoldSign — an enterprise e-signature product used by thousands of businesses worldwide.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-glow">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h10M4 18h16" />
+          </svg>View My Work
+        </a>
+        <a href="#contact" class="btn-ghost">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+          </svg>Let's Talk
+        </a>
+        <a href="Sasikumar_C_Resume.docx" class="btn-ghost">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path d="M12 2v10m0 0l-3-3m3 3l3-3M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2" />
+          </svg>Resume
+        </a>
       </div>
-    </div>
-    <div class="about-right-col">
-      <div class="nums-grid">
-        <div class="num-cell"><div class="num-big">2.5<em>+</em></div><div class="num-lbl">Years Experience</div></div>
-        <div class="num-cell"><div class="num-big">5<em>+</em></div><div class="num-lbl">Apps Shipped</div></div>
-        <div class="num-cell"><div class="num-big">1k<em>+</em></div><div class="num-lbl">BoldSign Users</div></div>
-        <div class="num-cell"><div class="num-big">2<em>x</em></div><div class="num-lbl">Android &amp; iOS</div></div>
-      </div>
-      <div class="live-badge">
-        <div class="green-dot"></div>
-        <div class="live-txt">
-          <small>Currently</small>
-          <strong>Software Engineer @ Syncfusion · BoldSign Team</strong>
+      <div class="hero-stats-strip">
+        <div class="h-stat">
+          <div class="h-stat-n">2.5<em>+</em></div>
+          <div class="h-stat-l">Years Exp</div>
+        </div>
+        <div class="h-stat">
+          <div class="h-stat-n">5<em>+</em></div>
+          <div class="h-stat-l">Apps Shipped</div>
+        </div>
+        <div class="h-stat">
+          <div class="h-stat-n">2<em>x</em></div>
+          <div class="h-stat-l">Platforms</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ════════ EXPERIENCE ════════ -->
-<section id="experience">
-  <div class="divider-row"><div class="div-line"></div><span class="div-label">02 / Experience</span><div class="div-line"></div></div>
-  <div class="eyebrow rv">Work &amp; Internships</div>
-  <h2 class="stitle rv">Where I've built things</h2>
-  <p class="ssub rv">Real-world product-company experience, internships, and side projects.</p>
+    <!-- Isometric Flutter builder animation -->
+    <canvas id="heroCanvas" width="420" height="480" aria-hidden="true"></canvas>
 
-  <div class="exp-shell rv">
-    <div class="exp-tabs" id="eTabs">
-      <div class="etab on" data-i="0"><div class="etab-co">Syncfusion</div><div class="etab-role">Flutter Developer</div></div>
-      <div class="etab" data-i="1"><div class="etab-co">Zoho Corporation</div><div class="etab-role">Web Developer</div></div>
-      <div class="etab" data-i="2"><div class="etab-co">Roots India</div><div class="etab-role">Automation Eng.</div></div>
+    <div class="hero-scroll">
+      <div class="scroll-line-anim"></div>
+      <span class="scroll-lbl">Scroll</span>
     </div>
-    <div>
-      <div class="epanel on" data-p="0">
-        <div class="ep-title">Software Engineer — Flutter Developer</div>
-        <div class="ep-co">Syncfusion Software Pvt. Ltd.</div>
-        <div class="ep-meta"><span>Sep 2023 — Present</span><span class="d"></span><span>Chennai, India</span><span class="d"></span><span>Full-Time · Product Company</span></div>
-        <ul class="ep-list">
-          <li>Develop and maintain features for <strong>BoldSign</strong> — an enterprise e-signature platform on Android &amp; iOS used by thousands of businesses globally.</li>
-          <li>Architect Flutter apps using <strong>MVVM pattern</strong> with Bloc, Cubit, and Streams for scalable, testable state management.</li>
-          <li>Implement core workflows — document upload, signature placement, signing flows, and real-time <strong>audit trails</strong> via secure REST APIs.</li>
-          <li>Integrate <strong>OAuth2 authentication</strong>, flutter_secure_storage, and flutter_cache_manager for enterprise-grade security and performance.</li>
-          <li>Debug and optimise performance on both Android &amp; iOS — resolving rendering bottlenecks and improving launch times.</li>
-          <li>Participate in <strong>Agile sprints</strong> — daily standups, code reviews, backlog refinement, and retrospectives in a cross-functional team.</li>
-          <li>Write clean, reusable Dart code following SOLID principles and internal code quality standards.</li>
-        </ul>
-        <div class="etags"><span class="etag">Flutter</span><span class="etag">Dart</span><span class="etag">MVVM</span><span class="etag">Bloc/Cubit</span><span class="etag">REST API</span><span class="etag">OAuth2</span><span class="etag">Android</span><span class="etag">iOS</span><span class="etag">Firebase</span></div>
-      </div>
-      <div class="epanel" data-p="1">
-        <div class="ep-title">Web Developer — Internship</div>
-        <div class="ep-co">Zoho Corporation</div>
-        <div class="ep-meta"><span>Jun 2022 — Jul 2022</span><span class="d"></span><span>Salem, India</span><span class="d"></span><span>Internship</span></div>
-        <ul class="ep-list">
-          <li>Built and enhanced front-end UI components using <strong>HTML, CSS, and JavaScript</strong> for internal web projects.</li>
-          <li>Exposure to professional development workflows and code standards at a global-scale tech company.</li>
-          <li>Developed responsive web interfaces practising clean semantic markup and cross-browser compatibility.</li>
-        </ul>
-        <div class="etags"><span class="etag">HTML5</span><span class="etag">CSS3</span><span class="etag">JavaScript</span></div>
-      </div>
-      <div class="epanel" data-p="2">
-        <div class="ep-title">Automation Engineer — Internship</div>
-        <div class="ep-co">M/S Roots India Pvt Ltd</div>
-        <div class="ep-meta"><span>Jun 2021 — Jul 2021</span><span class="d"></span><span>Coimbatore, India</span><span class="d"></span><span>Internship</span></div>
-        <ul class="ep-list">
-          <li>Hands-on exposure to <strong>industrial automation processes</strong> and engineering workflows in a manufacturing environment.</li>
-          <li>Developed strong problem-solving fundamentals connecting Mechatronics background to practical engineering.</li>
-        </ul>
-        <div class="etags"><span class="etag">Automation</span><span class="etag">Mechatronics</span><span class="etag">Problem Solving</span></div>
-      </div>
+  </section>
+
+  <!-- ════════ ABOUT ════════ -->
+  <section id="about">
+    <div class="divider-row">
+      <div class="div-line"></div><span class="div-label">01 / About</span>
+      <div class="div-line"></div>
     </div>
-  </div>
-</section>
-
-<!-- ════════ SKILLS ════════ -->
-<section id="skills">
-  <div class="divider-row"><div class="div-line"></div><span class="div-label">03 / Skills</span><div class="div-line"></div></div>
-  <div class="marquee-wrap"><div class="mtrack" id="tr1"></div></div>
-  <div class="marquee-wrap"><div class="mtrack mtrack2" id="tr2"></div></div>
-  <div class="skills-body rv">
-    <div>
-      <div class="eyebrow">What I Know</div>
-      <h2 class="stitle">Tools &amp;<br/>Technologies</h2>
-      <p class="ssub" style="margin-bottom:0">Built through 2.5 years of product-company work, internships, and building side projects from scratch.</p>
-    </div>
-    <div>
-      <div class="sk-cat">
-        <div class="sk-cat-lbl">Mobile Development</div>
-        <div class="sk-bar"><div class="sk-bar-top"><span class="sk-name">Flutter &amp; Dart</span><span class="sk-pct">95%</span></div><div class="sk-track"><div class="sk-fill" data-w="95"></div></div></div>
-        <div class="sk-bar"><div class="sk-bar-top"><span class="sk-name">Bloc / Cubit State Management</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-fill" data-w="88"></div></div></div>
-        <div class="sk-bar"><div class="sk-bar-top"><span class="sk-name">Android SDK</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-fill" data-w="80"></div></div></div>
-        <div class="sk-bar"><div class="sk-bar-top"><span class="sk-name">iOS / Xcode</span><span class="sk-pct">72%</span></div><div class="sk-track"><div class="sk-fill" data-w="72"></div></div></div>
+    <div class="about-wrap rv">
+      <div>
+        <div class="eyebrow">Who I Am</div>
+        <h2 class="stitle">Developer who ships<br />real products</h2>
+        <div class="about-copy">
+          <p>I'm a <strong>Flutter developer</strong> with <span class="hl">2.5 years of professional experience</span>
+            building cross-platform mobile applications at Syncfusion — one of India's leading product software
+            companies.</p>
+          <p>My day job is working on <strong>BoldSign</strong>, an enterprise e-signature platform on Android &amp;
+            iOS. Working in a real product team has taught me to write code that scales, think beyond features, and care
+            deeply about the end user.</p>
+          <p>Outside work, I build independently. <span class="hl">xPen</span> is my personal finance app built solo in
+            Flutter — ready to launch on Android. I also build web apps with React, meaning I work across both mobile
+            and web.</p>
+          <p>I'm now channelling that discipline into <strong>freelance work</strong> — helping people bring their app
+            ideas to life, professionally.</p>
+        </div>
       </div>
-      <div class="sk-cat">
-        <div class="sk-cat-lbl">Web Development</div>
-        <div class="sk-bar"><div class="sk-bar-top"><span class="sk-name">React.js</span><span class="sk-pct">78%</span></div><div class="sk-track"><div class="sk-fill" data-w="78"></div></div></div>
-        <div class="sk-bar"><div class="sk-bar-top"><span class="sk-name">JavaScript</span><span class="sk-pct">75%</span></div><div class="sk-track"><div class="sk-fill" data-w="75"></div></div></div>
-        <div class="sk-bar"><div class="sk-bar-top"><span class="sk-name">HTML5 / CSS3</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-fill" data-w="82"></div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ PROJECTS ════════ -->
-<section id="projects">
-  <div class="divider-row"><div class="div-line"></div><span class="div-label">04 / Projects</span><div class="div-line"></div></div>
-  <div class="eyebrow rv">What I've Built</div>
-  <h2 class="stitle rv">Selected Projects</h2>
-  <p class="ssub rv">From enterprise apps used by thousands, to indie products built completely solo.</p>
-
-  <div class="pgrid">
-
-    <!-- BoldSign — Featured -->
-    <div class="pcard feat rv">
-      <div class="pnum">01 — FEATURED PROJECT</div>
-      <div class="feat-inner">
-        <div>
-          <div class="ptop"><div class="pname">BoldSign</div><span class="pbadge pb-prod">🏢 Production</span></div>
-          <div class="ptagline">Enterprise E-Signature Platform · Syncfusion · Android &amp; iOS</div>
-          <div class="pdesc">An enterprise-grade mobile e-signature app enabling businesses to send, sign, and manage legal documents digitally — used by thousands of companies globally. I work on this full-time as part of the Syncfusion engineering team.</div>
-          <ul class="pbullets">
-            <li>MVVM + Bloc/Cubit architecture for scalable, production-grade state management</li>
-            <li>Secure REST API integration with OAuth2 auth and encrypted local storage</li>
-            <li>Document upload, signature field placement, signing workflows, and audit trails</li>
-            <li>Consistent cross-platform UX across Android &amp; iOS</li>
-          </ul>
-          <div class="pfoot">
-            <div class="ptechs"><span class="pt">Flutter</span><span class="pt">Dart</span><span class="pt">MVVM</span><span class="pt">Bloc</span><span class="pt">REST API</span><span class="pt">Android</span><span class="pt">iOS</span></div>
-            <div class="plinks"><a href="https://play.google.com/store/apps/details?id=com.syncfusion.boldsign" target="_blank" class="plbtn">▶ Play Store</a><a href="https://boldsign.com" target="_blank" class="plbtn">↗ Website</a></div>
+      <div class="about-right-col">
+        <div class="nums-grid">
+          <div class="num-cell">
+            <div class="num-big">2.5<em>+</em></div>
+            <div class="num-lbl">Years Experience</div>
+          </div>
+          <div class="num-cell">
+            <div class="num-big">5<em>+</em></div>
+            <div class="num-lbl">Apps Shipped</div>
+          </div>
+          <div class="num-cell">
+            <div class="num-big">1k<em>+</em></div>
+            <div class="num-lbl">BoldSign Users</div>
+          </div>
+          <div class="num-cell">
+            <div class="num-big">2<em>x</em></div>
+            <div class="num-lbl">Android &amp; iOS</div>
           </div>
         </div>
-        <div class="code-mock">
-          <pre><span class="cm">// BoldSign · Document signing</span>
+        <div class="live-badge">
+          <div class="green-dot"></div>
+          <div class="live-txt">
+            <small>Currently</small>
+            <strong>Software Engineer @ Syncfusion · BoldSign Team</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ EXPERIENCE ════════ -->
+  <section id="experience">
+    <div class="divider-row">
+      <div class="div-line"></div><span class="div-label">02 / Experience</span>
+      <div class="div-line"></div>
+    </div>
+    <div class="eyebrow rv">Work &amp; Internships</div>
+    <h2 class="stitle rv">Where I've built things</h2>
+    <p class="ssub rv">Real-world product-company experience, internships, and side projects.</p>
+
+    <div class="exp-shell rv">
+      <div class="exp-tabs" id="eTabs">
+        <div class="etab on" data-i="0">
+          <div class="etab-co">Syncfusion</div>
+          <div class="etab-role">Flutter Developer</div>
+        </div>
+        <div class="etab" data-i="1">
+          <div class="etab-co">Zoho Corporation</div>
+          <div class="etab-role">Web Developer</div>
+        </div>
+        <div class="etab" data-i="2">
+          <div class="etab-co">Roots India</div>
+          <div class="etab-role">Automation Eng.</div>
+        </div>
+      </div>
+      <div>
+        <div class="epanel on" data-p="0">
+          <div class="ep-title">Software Engineer — Flutter Developer</div>
+          <div class="ep-co">Syncfusion Software Pvt. Ltd.</div>
+          <div class="ep-meta"><span>Sep 2023 — Present</span><span class="d"></span><span>Chennai, India</span><span
+              class="d"></span><span>Full-Time · Product Company</span></div>
+          <ul class="ep-list">
+            <li>Develop and maintain features for <strong>BoldSign</strong> — an enterprise e-signature platform on
+              Android &amp; iOS used by thousands of businesses globally.</li>
+            <li>Architect Flutter apps using <strong>MVVM pattern</strong> with Bloc, Cubit, and Streams for scalable,
+              testable state management.</li>
+            <li>Implement core workflows — document upload, signature placement, signing flows, and real-time
+              <strong>audit trails</strong> via secure REST APIs.
+            </li>
+            <li>Integrate <strong>OAuth2 authentication</strong>, flutter_secure_storage, and flutter_cache_manager for
+              enterprise-grade security and performance.</li>
+            <li>Debug and optimise performance on both Android &amp; iOS — resolving rendering bottlenecks and improving
+              launch times.</li>
+            <li>Participate in <strong>Agile sprints</strong> — daily standups, code reviews, backlog refinement, and
+              retrospectives in a cross-functional team.</li>
+            <li>Write clean, reusable Dart code following SOLID principles and internal code quality standards.</li>
+          </ul>
+          <div class="etags"><span class="etag">Flutter</span><span class="etag">Dart</span><span
+              class="etag">MVVM</span><span class="etag">Bloc/Cubit</span><span class="etag">REST API</span><span
+              class="etag">OAuth2</span><span class="etag">Android</span><span class="etag">iOS</span><span
+              class="etag">Firebase</span></div>
+        </div>
+        <div class="epanel" data-p="1">
+          <div class="ep-title">Web Developer — Internship</div>
+          <div class="ep-co">Zoho Corporation</div>
+          <div class="ep-meta"><span>Jun 2022 — Jul 2022</span><span class="d"></span><span>Salem, India</span><span
+              class="d"></span><span>Internship</span></div>
+          <ul class="ep-list">
+            <li>Built and enhanced front-end UI components using <strong>HTML, CSS, and JavaScript</strong> for internal
+              web projects.</li>
+            <li>Exposure to professional development workflows and code standards at a global-scale tech company.</li>
+            <li>Developed responsive web interfaces practising clean semantic markup and cross-browser compatibility.
+            </li>
+          </ul>
+          <div class="etags"><span class="etag">HTML5</span><span class="etag">CSS3</span><span
+              class="etag">JavaScript</span></div>
+        </div>
+        <div class="epanel" data-p="2">
+          <div class="ep-title">Automation Engineer — Internship</div>
+          <div class="ep-co">M/S Roots India Pvt Ltd</div>
+          <div class="ep-meta"><span>Jun 2021 — Jul 2021</span><span class="d"></span><span>Coimbatore,
+              India</span><span class="d"></span><span>Internship</span></div>
+          <ul class="ep-list">
+            <li>Hands-on exposure to <strong>industrial automation processes</strong> and engineering workflows in a
+              manufacturing environment.</li>
+            <li>Developed strong problem-solving fundamentals connecting Mechatronics background to practical
+              engineering.</li>
+          </ul>
+          <div class="etags"><span class="etag">Automation</span><span class="etag">Mechatronics</span><span
+              class="etag">Problem Solving</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SKILLS ════════ -->
+  <section id="skills">
+    <div class="divider-row">
+      <div class="div-line"></div><span class="div-label">03 / Skills</span>
+      <div class="div-line"></div>
+    </div>
+    <div class="marquee-wrap">
+      <div class="mtrack" id="tr1"></div>
+    </div>
+    <div class="marquee-wrap">
+      <div class="mtrack mtrack2" id="tr2"></div>
+    </div>
+    <div class="skills-body rv">
+      <div>
+        <div class="eyebrow">What I Know</div>
+        <h2 class="stitle">Tools &amp;<br />Technologies</h2>
+        <p class="ssub" style="margin-bottom:0">Built through 2.5 years of product-company work, internships, and
+          building side projects from scratch.</p>
+      </div>
+      <div>
+        <div class="sk-cat">
+          <div class="sk-cat-lbl">Mobile Development</div>
+          <div class="sk-bar">
+            <div class="sk-bar-top"><span class="sk-name">Flutter &amp; Dart</span><span class="sk-pct">95%</span></div>
+            <div class="sk-track">
+              <div class="sk-fill" data-w="95"></div>
+            </div>
+          </div>
+          <div class="sk-bar">
+            <div class="sk-bar-top"><span class="sk-name">Bloc / Cubit State Management</span><span
+                class="sk-pct">88%</span></div>
+            <div class="sk-track">
+              <div class="sk-fill" data-w="88"></div>
+            </div>
+          </div>
+          <div class="sk-bar">
+            <div class="sk-bar-top"><span class="sk-name">Android SDK</span><span class="sk-pct">80%</span></div>
+            <div class="sk-track">
+              <div class="sk-fill" data-w="80"></div>
+            </div>
+          </div>
+          <div class="sk-bar">
+            <div class="sk-bar-top"><span class="sk-name">iOS / Xcode</span><span class="sk-pct">72%</span></div>
+            <div class="sk-track">
+              <div class="sk-fill" data-w="72"></div>
+            </div>
+          </div>
+        </div>
+        <div class="sk-cat">
+          <div class="sk-cat-lbl">Web Development</div>
+          <div class="sk-bar">
+            <div class="sk-bar-top"><span class="sk-name">React.js</span><span class="sk-pct">78%</span></div>
+            <div class="sk-track">
+              <div class="sk-fill" data-w="78"></div>
+            </div>
+          </div>
+          <div class="sk-bar">
+            <div class="sk-bar-top"><span class="sk-name">JavaScript</span><span class="sk-pct">75%</span></div>
+            <div class="sk-track">
+              <div class="sk-fill" data-w="75"></div>
+            </div>
+          </div>
+          <div class="sk-bar">
+            <div class="sk-bar-top"><span class="sk-name">HTML5 / CSS3</span><span class="sk-pct">82%</span></div>
+            <div class="sk-track">
+              <div class="sk-fill" data-w="82"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ PROJECTS ════════ -->
+  <section id="projects">
+    <div class="divider-row">
+      <div class="div-line"></div><span class="div-label">04 / Projects</span>
+      <div class="div-line"></div>
+    </div>
+    <div class="eyebrow rv">What I've Built</div>
+    <h2 class="stitle rv">Selected Projects</h2>
+    <p class="ssub rv">From enterprise apps used by thousands, to indie products built completely solo.</p>
+
+    <div class="pgrid">
+
+      <!-- BoldSign — Featured -->
+      <div class="pcard feat rv">
+        <div class="pnum">01 — FEATURED PROJECT</div>
+        <div class="feat-inner">
+          <div>
+            <div class="ptop">
+              <div class="pname">BoldSign</div><span class="pbadge pb-prod">🏢 Production</span>
+            </div>
+            <div class="ptagline">Enterprise E-Signature Platform · Syncfusion · Android &amp; iOS</div>
+            <div class="pdesc">An enterprise-grade mobile e-signature app enabling businesses to send, sign, and manage
+              legal documents digitally — used by thousands of companies globally. I work on this full-time as part of
+              the Syncfusion engineering team.</div>
+            <ul class="pbullets">
+              <li>MVVM + Bloc/Cubit architecture for scalable, production-grade state management</li>
+              <li>Secure REST API integration with OAuth2 auth and encrypted local storage</li>
+              <li>Document upload, signature field placement, signing workflows, and audit trails</li>
+              <li>Consistent cross-platform UX across Android &amp; iOS</li>
+            </ul>
+            <div class="pfoot">
+              <div class="ptechs"><span class="pt">Flutter</span><span class="pt">Dart</span><span
+                  class="pt">MVVM</span><span class="pt">Bloc</span><span class="pt">REST API</span><span
+                  class="pt">Android</span><span class="pt">iOS</span></div>
+              <div class="plinks"><a href="https://play.google.com/store/apps/details?id=com.syncfusion.boldsign"
+                  target="_blank" class="plbtn">▶ Play Store</a><a href="https://boldsign.com" target="_blank"
+                  class="plbtn">↗ Website</a></div>
+            </div>
+          </div>
+          <div class="code-mock">
+            <pre><span class="cm">// BoldSign · Document signing</span>
 <span class="kw">class</span> <span class="cls">SigningBloc</span>
   <span class="kw">extends</span> <span class="cls">Bloc</span>&lt;<span class="cls">SignEvent</span>, <span class="cls">SignState</span>&gt; {
 
@@ -233,132 +361,175 @@
     emit(<span class="cls">SigningSuccess</span>(res));
   }
 }</pre>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- xPen -->
-    <div class="pcard rv">
-      <div class="pnum">02</div>
-      <div class="ptop"><div class="pname">xPen</div><span class="pbadge pb-soon">🚀 Launch Ready</span></div>
-      <div class="ptagline">Personal Finance App · Solo Build · Flutter</div>
-      <div class="pdesc">My own Flutter app — built solo from concept to Play Store submission. Tracks income and expenses with category breakdowns, monthly summaries, and visual charts. Offline-first.</div>
-      <ul class="pbullets">
-        <li>Full product lifecycle solo: design → dev → QA → Play Store prep</li>
-        <li>Offline-first local storage with SQLite / Hive — no internet required</li>
-        <li>Material Design 3 — clean, modern, accessible UI</li>
-      </ul>
-      <div class="pfoot">
-        <div class="ptechs"><span class="pt">Flutter</span><span class="pt">Dart</span><span class="pt">SQLite</span><span class="pt">Hive</span><span class="pt">Material 3</span></div>
-        <div class="plinks"><span class="plbtn off">▶ Coming Soon</span></div>
-      </div>
-    </div>
-
-    <!-- Thoughts Sharing -->
-    <div class="pcard rv">
-      <div class="pnum">03</div>
-      <div class="ptop"><div class="pname">Thoughts Sharing</div><span class="pbadge pb-live">🌐 Live</span></div>
-      <div class="ptagline">Social Platform · React.js · Netlify</div>
-      <div class="pdesc">A dynamic social web app where users post, browse, and engage with shared ideas. Full CRUD with React hooks, responsive layout, and instant deployment on Netlify.</div>
-      <ul class="pbullets">
-        <li>Full CRUD with React hooks and component-based architecture</li>
-        <li>Responsive across desktop and mobile browsers</li>
-      </ul>
-      <div class="pfoot">
-        <div class="ptechs"><span class="pt">React.js</span><span class="pt">JavaScript</span><span class="pt">CSS3</span><span class="pt">Netlify</span></div>
-        <div class="plinks"><a href="https://thoughtsharing.netlify.app" target="_blank" class="plbtn">↗ Live Demo</a></div>
-      </div>
-    </div>
-
-    <!-- To-Do -->
-    <div class="pcard rv">
-      <div class="pnum">04</div>
-      <div class="ptop"><div class="pname">To-Do App</div><span class="pbadge pb-live">🌐 Live</span></div>
-      <div class="ptagline">Task Manager · React.js · Netlify</div>
-      <div class="pdesc">Clean task management app with create, prioritise, and complete. Priority labelling, due date tracking, and colour-coded UI built in React with hooks state management.</div>
-      <ul class="pbullets">
-        <li>React hooks — no backend, instant local state</li>
-        <li>Priority system with colour-coded visual feedback</li>
-      </ul>
-      <div class="pfoot">
-        <div class="ptechs"><span class="pt">React.js</span><span class="pt">JavaScript</span><span class="pt">CSS3</span></div>
-        <div class="plinks"><a href="https://todoer.netlify.app" target="_blank" class="plbtn">↗ Live Demo</a></div>
-      </div>
-    </div>
-
-    <!-- Rock Paper Scissors -->
-    <div class="pcard rv">
-      <div class="pnum">05</div>
-      <div class="ptop"><div class="pname">Rock Paper Scissors</div><span class="pbadge pb-live">🌐 Live</span></div>
-      <div class="ptagline">Browser Game · Vanilla JavaScript</div>
-      <div class="pdesc">Fully responsive Rock-Paper-Scissors game demonstrating front-end JS logic, DOM manipulation, score tracking, and cross-device responsive design — no frameworks.</div>
-      <ul class="pbullets">
-        <li>Pure JavaScript game logic with animated score tracking</li>
-        <li>Responsive — works perfectly on all screen sizes</li>
-      </ul>
-      <div class="pfoot">
-        <div class="ptechs"><span class="pt">HTML5</span><span class="pt">CSS3</span><span class="pt">JavaScript</span></div>
-        <div class="plinks"><a href="https://rockpaperscissorsgaming.w3spaces.com" target="_blank" class="plbtn">↗ Live Demo</a></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ════════ CONTACT ════════ -->
-<section id="contact">
-  <div class="divider-row"><div class="div-line"></div><span class="div-label">05 / Contact</span><div class="div-line"></div></div>
-  <div class="contact-wrap">
-    <div class="rv">
-      <div class="eyebrow">Get In Touch</div>
-      <h2 class="stitle">Let's build<br/>something together</h2>
-      <p class="ssub">Open to freelance mobile and web projects. Drop me a message — I'll get back within 24 hours.</p>
-      <ul class="clinks">
-        <li><a href="mailto:sasikumarc02@gmail.com" class="citem"><div class="cicon">📧</div><div><span class="clbl">Email</span><span class="cval">sasikumarc02@gmail.com</span></div></a></li>
-        <li><a href="tel:+919894219613" class="citem"><div class="cicon">📞</div><div><span class="clbl">Phone</span><span class="cval">+91 9894219613</span></div></a></li>
-        <li><a href="https://www.linkedin.com/in/sasikumar-c-225874212" target="_blank" class="citem"><div class="cicon">💼</div><div><span class="clbl">LinkedIn</span><span class="cval">sasikumar-c-225874212</span></div></a></li>
-        <li><a href="https://github.com/Sasikumar27" target="_blank" class="citem"><div class="cicon">🐙</div><div><span class="clbl">GitHub</span><span class="cval">github.com/Sasikumar27</span></div></a></li>
-      </ul>
-    </div>
-    <div class="rv">
-      <form id="cForm" onsubmit="doSubmit(event)">
-        <div class="frow">
-          <div class="fgroup"><label class="flbl">Name</label><input type="text" class="finput" placeholder="Your name" required/></div>
-          <div class="fgroup"><label class="flbl">Phone</label><input type="tel" class="finput" placeholder="+91 XXXXX XXXXX"/></div>
+      <!-- xPen -->
+      <div class="pcard rv">
+        <div class="pnum">02</div>
+        <div class="ptop">
+          <div class="pname">xPen</div><span class="pbadge pb-soon">🚀 Launch Ready</span>
         </div>
-        <div class="fgroup"><label class="flbl">Email</label><input type="email" class="finput" placeholder="you@email.com" required/></div>
-        <div class="fgroup">
-          <label class="flbl">Subject</label>
-          <select class="finput fselect" id="subjectSelect">
-            <option value="">Select a subject</option>
-            <option>Mobile App Development</option>
-            <option>Web Development</option>
-            <option>Flutter Project</option>
-            <option>General Enquiry</option>
-            <option>Other</option>
-          </select>
+        <div class="ptagline">Personal Finance App · Solo Build · Flutter</div>
+        <div class="pdesc">My own Flutter app — built solo from concept to Play Store submission. Tracks income and
+          expenses with category breakdowns, monthly summaries, and visual charts. Offline-first.</div>
+        <ul class="pbullets">
+          <li>Full product lifecycle solo: design → dev → QA → Play Store prep</li>
+          <li>Offline-first local storage with SQLite / Hive — no internet required</li>
+          <li>Material Design 3 — clean, modern, accessible UI</li>
+        </ul>
+        <div class="pfoot">
+          <div class="ptechs"><span class="pt">Flutter</span><span class="pt">Dart</span><span
+              class="pt">SQLite</span><span class="pt">Hive</span><span class="pt">Material 3</span></div>
+          <div class="plinks"><span class="plbtn off">▶ Coming Soon</span></div>
         </div>
-        <div class="fgroup"><label class="flbl">Message</label><textarea class="finput" placeholder="Tell me about your project..."></textarea></div>
-        <button type="submit" class="fsub" id="sendBtn">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send Message
-        </button>
-        <div class="fsuccess" id="fOk">✅ Message sent! I'll get back to you within 24 hours.</div>
-      </form>
+      </div>
+
+      <!-- Thoughts Sharing -->
+      <div class="pcard rv">
+        <div class="pnum">03</div>
+        <div class="ptop">
+          <div class="pname">Thoughts Sharing</div><span class="pbadge pb-live">🌐 Live</span>
+        </div>
+        <div class="ptagline">Social Platform · React.js · Netlify</div>
+        <div class="pdesc">A dynamic social web app where users post, browse, and engage with shared ideas. Full CRUD
+          with React hooks, responsive layout, and instant deployment on Netlify.</div>
+        <ul class="pbullets">
+          <li>Full CRUD with React hooks and component-based architecture</li>
+          <li>Responsive across desktop and mobile browsers</li>
+        </ul>
+        <div class="pfoot">
+          <div class="ptechs"><span class="pt">React.js</span><span class="pt">JavaScript</span><span
+              class="pt">CSS3</span><span class="pt">Netlify</span></div>
+          <div class="plinks"><a href="https://thoughtsharing.netlify.app" target="_blank" class="plbtn">↗ Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- To-Do -->
+      <div class="pcard rv">
+        <div class="pnum">04</div>
+        <div class="ptop">
+          <div class="pname">To-Do App</div><span class="pbadge pb-live">🌐 Live</span>
+        </div>
+        <div class="ptagline">Task Manager · React.js · Netlify</div>
+        <div class="pdesc">Clean task management app with create, prioritise, and complete. Priority labelling, due date
+          tracking, and colour-coded UI built in React with hooks state management.</div>
+        <ul class="pbullets">
+          <li>React hooks — no backend, instant local state</li>
+          <li>Priority system with colour-coded visual feedback</li>
+        </ul>
+        <div class="pfoot">
+          <div class="ptechs"><span class="pt">React.js</span><span class="pt">JavaScript</span><span
+              class="pt">CSS3</span></div>
+          <div class="plinks"><a href="https://todoer.netlify.app" target="_blank" class="plbtn">↗ Live Demo</a></div>
+        </div>
+      </div>
+
+      <!-- Rock Paper Scissors -->
+      <div class="pcard rv">
+        <div class="pnum">05</div>
+        <div class="ptop">
+          <div class="pname">Rock Paper Scissors</div><span class="pbadge pb-live">🌐 Live</span>
+        </div>
+        <div class="ptagline">Browser Game · Vanilla JavaScript</div>
+        <div class="pdesc">Fully responsive Rock-Paper-Scissors game demonstrating front-end JS logic, DOM manipulation,
+          score tracking, and cross-device responsive design — no frameworks.</div>
+        <ul class="pbullets">
+          <li>Pure JavaScript game logic with animated score tracking</li>
+          <li>Responsive — works perfectly on all screen sizes</li>
+        </ul>
+        <div class="pfoot">
+          <div class="ptechs"><span class="pt">HTML5</span><span class="pt">CSS3</span><span
+              class="pt">JavaScript</span></div>
+          <div class="plinks"><a href="https://rockpaperscissorsgaming.w3spaces.com" target="_blank" class="plbtn">↗
+              Live Demo</a></div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ════════ FOOTER ════════ -->
-<footer>
-  <div class="foot-l">Sasikumar C &nbsp;·&nbsp; Flutter Developer &nbsp;·&nbsp; Erode, TN &nbsp;·&nbsp; <em>© 2025</em></div>
-  <div class="foot-r">
-    <a href="mailto:sasikumarc02@gmail.com">Email</a>
-    <a href="https://github.com/Sasikumar27" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/sasikumar-c-225874212" target="_blank">LinkedIn</a>
-    <a href="#hero">↑ Top</a>
-  </div>
-</footer>
+  <!-- ════════ CONTACT ════════ -->
+  <section id="contact">
+    <div class="divider-row">
+      <div class="div-line"></div><span class="div-label">05 / Contact</span>
+      <div class="div-line"></div>
+    </div>
+    <div class="contact-wrap">
+      <div class="rv">
+        <div class="eyebrow">Get In Touch</div>
+        <h2 class="stitle">Let's build<br />something together</h2>
+        <p class="ssub">Open to freelance mobile and web projects. Drop me a message — I'll get back within 24 hours.
+        </p>
+        <ul class="clinks">
+          <li><a href="mailto:sasikumarc02@gmail.com" class="citem">
+              <div class="cicon">📧</div>
+              <div><span class="clbl">Email</span><span class="cval">sasikumarc02@gmail.com</span></div>
+            </a></li>
+          <li><a href="tel:+919894219613" class="citem">
+              <div class="cicon">📞</div>
+              <div><span class="clbl">Phone</span><span class="cval">+91 9894219613</span></div>
+            </a></li>
+          <li><a href="https://www.linkedin.com/in/sasikumar-c-225874212" target="_blank" class="citem">
+              <div class="cicon">💼</div>
+              <div><span class="clbl">LinkedIn</span><span class="cval">sasikumar-c-225874212</span></div>
+            </a></li>
+          <li><a href="https://github.com/Sasikumar27" target="_blank" class="citem">
+              <div class="cicon">🐙</div>
+              <div><span class="clbl">GitHub</span><span class="cval">github.com/Sasikumar27</span></div>
+            </a></li>
+        </ul>
+      </div>
+      <div class="rv">
+        <form id="cForm" onsubmit="doSubmit(event)">
+          <div class="frow">
+            <div class="fgroup"><label class="flbl">Name</label><input type="text" class="finput"
+                placeholder="Your name" required /></div>
+            <div class="fgroup"><label class="flbl">Phone</label><input type="tel" class="finput"
+                placeholder="+91 XXXXX XXXXX" /></div>
+          </div>
+          <div class="fgroup"><label class="flbl">Email</label><input type="email" class="finput"
+              placeholder="you@email.com" required /></div>
+          <div class="fgroup">
+            <label class="flbl">Subject</label>
+            <select class="finput fselect" id="subjectSelect">
+              <option value="">Select a subject</option>
+              <option>Mobile App Development</option>
+              <option>Web Development</option>
+              <option>Flutter Project</option>
+              <option>General Enquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fgroup"><label class="flbl">Message</label><textarea class="finput"
+              placeholder="Tell me about your project..."></textarea></div>
+          <button type="submit" class="fsub" id="sendBtn">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>Send Message
+          </button>
+          <div class="fsuccess" id="fOk">✅ Message sent! I'll get back to you within 24 hours.</div>
+        </form>
+      </div>
+    </div>
+  </section>
 
-<script src="main.js"></script>
+  <!-- ════════ FOOTER ════════ -->
+  <footer>
+    <div class="foot-l">Sasikumar C &nbsp;·&nbsp; Flutter Developer &nbsp;·&nbsp; Erode, TN &nbsp;·&nbsp; <em>©
+        2025</em></div>
+    <div class="foot-r">
+      <a href="mailto:sasikumarc02@gmail.com">Email</a>
+      <a href="https://github.com/Sasikumar27" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/sasikumar-c-225874212" target="_blank">LinkedIn</a>
+      <a href="#hero">↑ Top</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
+
 </html>

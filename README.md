@@ -81,25 +81,6 @@ cd portfolio
 open index.html    # macOS
 # or just double-click index.html in your file explorer
 ```
-
-### Option 2 — Deploy to Netlify (recommended, free)
-1. Go to [app.netlify.com/drop](https://app.netlify.com/drop)
-2. Drag and drop the `index.html` file
-3. Your site is live in ~30 seconds ✅
-
-### Option 3 — Deploy to Vercel
-```bash
-npm install -g vercel
-vercel --prod
-```
-
-### Option 4 — GitHub Pages
-1. Push this repo to GitHub
-2. Go to **Settings → Pages → Source: main branch / root**
-3. Rename `index.html` if needed and enable Pages
-
----
-
 ## 🎨 Customisation
 
 All colours are CSS custom properties — easy to retheme.
@@ -117,43 +98,4 @@ All colours are CSS custom properties — easy to retheme.
 
 To update your details, search for the following placeholders in `index.html`:
 
-| Placeholder | Replace with |
-|-------------|-------------|
-| `sasikumarc02@gmail.com` | Your email |
-| `+91 9894219613` | Your phone |
-| `sasikumar-c-225874212` | Your LinkedIn ID |
-| `Sasikumar27` | Your GitHub username |
-| `Sasikumar_C_Resume.docx` | Your resume filename |
-| `Coming Soon` (xPen) | Play Store link once live |
-
 ---
-
-## 📋 Roadmap / TODO
-
-- [ ] Add xPen Play Store link once published
-- [ ] Add `preview-dark.png` and `preview-light.png` screenshots
-- [ ] Connect contact form to a backend (e.g. [Formspree](https://formspree.io/) — free tier)
-- [ ] Add a custom domain (e.g. `sasikumar.dev`)
-- [ ] Add a Blog section once content is ready
-
-### Connecting the contact form (Formspree — free, no backend needed)
-1. Sign up at [formspree.io](https://formspree.io)
-2. Create a new form → copy your endpoint URL
-3. In `index.html`, find `id="cForm"` and add `action="https://formspree.io/f/YOUR_ID" method="POST"`
-4. Remove the `onsubmit="doSubmit(event)"` attribute — Formspree handles the rest
-
----
-
-## 📄 License
-
-MIT — feel free to use this as inspiration for your own portfolio. If you do, a credit or star would be appreciated! ⭐
-
----
-
-<div align="center">
-
-Built with 💜 by **Sasikumar C** — Flutter Developer, Erode, Tamil Nadu 🇮🇳
-
-[Email](mailto:sasikumarc02@gmail.com) · [LinkedIn](https://www.linkedin.com/in/sasikumar-c-225874212) · [GitHub](https://github.com/Sasikumar27)
-
-</div>

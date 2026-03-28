@@ -2,7 +2,7 @@
 
 > Personal portfolio website of **Sasikumar C**, Flutter & Mobile App Developer with 2.5 years of experience building cross-platform Android & iOS apps.
 
-[![Live Demo](https://sasikumar-dev.netlify.app/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-7c6fff?style=for-the-badge&logo=vercel&logoColor=white)](https://sasikumar-dev.netlify.app/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](./LICENSE)
 [![HTML](https://img.shields.io/badge/Built_with-HTML%2FCSS%2FJS-orange?style=for-the-badge&logo=html5&logoColor=white)](.)
 
@@ -19,16 +19,6 @@
 - 📬 **Contact form** with subject selector and send feedback
 - 📱 **Fully responsive** — mobile, tablet, and desktop
 - ⚡ **Zero dependencies** — pure HTML, CSS, and vanilla JS. No frameworks, no build step.
-
----
-
-## 📸 Preview
-
-| Dark Theme | Light Theme |
-|---|---|
-| ![Dark](./preview-dark.png) | ![Light](./preview-light.png) |
-
-> Add screenshots to the repo root as `preview-dark.png` and `preview-light.png`.
 
 ---
 

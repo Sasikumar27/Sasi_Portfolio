@@ -329,14 +329,6 @@ nav {
     transform: translateY(-2px)
 }
 
-/* hero stats strip */
-.hero-stats-strip {
-    display: flex;
-    gap: 0;
-    opacity: 0;
-    animation: fadeUp .65s .45s forwards
-}
-
 .h-stat {
     padding: 18px 32px;
     border: 1px solid rgba(255, 255, 255, 0.06);

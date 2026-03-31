@@ -471,9 +471,9 @@
         <p class="ssub">Open to freelance mobile and web projects. Drop me a message — I'll get back within 24 hours.
         </p>
         <ul class="clinks">
-          <li><a href="mailto:sasikumarc02@gmail.com" class="citem">
+          <li><a href="mailto:sasikumarc.work@gmail.com" class="citem">
               <div class="cicon">📧</div>
-              <div><span class="clbl">Email</span><span class="cval">sasikumarc02@gmail.com</span></div>
+              <div><span class="clbl">Email</span><span class="cval">sasikumarc.work@gmail.com</span></div>
             </a></li>
           <li><a href="tel:+919894219613" class="citem">
               <div class="cicon">📞</div>
@@ -492,26 +492,34 @@
       <div class="rv">
         <form id="cForm" onsubmit="doSubmit(event)">
           <div class="frow">
-            <div class="fgroup"><label class="flbl">Name</label><input type="text" class="finput"
+            <div class="fgroup"><label class="flbl">Name</label><input type="text" name="user_name" class="finput"
                 placeholder="Your name" required /></div>
-            <div class="fgroup"><label class="flbl">Phone</label><input type="tel" class="finput"
+            <div class="fgroup"><label class="flbl">Phone</label><input type="tel" name="user_phone" class="finput"
                 placeholder="+91 XXXXX XXXXX" /></div>
           </div>
-          <div class="fgroup"><label class="flbl">Email</label><input type="email" class="finput"
+          <div class="fgroup"><label class="flbl">Email</label><input type="email" name="user_email" class="finput"
               placeholder="you@email.com" required /></div>
           <div class="fgroup">
             <label class="flbl">Subject</label>
-            <select class="finput"
-              style="cursor:pointer;color:rgba(255,255,255,.55);appearance:none;-webkit-appearance:none">
-              <option value="" style="background:#0b0f18">Select a subject</option>
-              <option style="background:#0b0f18">Mobile App Development</option>
-              <option style="background:#0b0f18">Web Development</option>
-              <option style="background:#0b0f18">Flutter Project</option>
-              <option style="background:#0b0f18">General Enquiry</option>
-              <option style="background:#0b0f18">Other</option>
-            </select>
+            <div class="custom-select">
+              <input type="hidden" name="subject" id="subjectInput" value="">
+              <div class="select-trigger" id="selectTrigger">
+                <span id="selectDisplay">Select a subject</span>
+                <svg width="12" height="8" fill="none" viewBox="0 0 12 8">
+                  <path fill="#7c6fff" d="M0 0l6 8 6-8z"/>
+                </svg>
+              </div>
+              <div class="select-dropdown" id="selectDropdown">
+                <div class="select-option" data-value="">Select a subject</div>
+                <div class="select-option" data-value="Mobile App Development">Mobile App Development</div>
+                <div class="select-option" data-value="Web Development">Web Development</div>
+                <div class="select-option" data-value="Flutter Project">Flutter Project</div>
+                <div class="select-option" data-value="General Enquiry">General Enquiry</div>
+                <div class="select-option" data-value="Other">Other</div>
+              </div>
+            </div>
           </div>
-          <div class="fgroup"><label class="flbl">Message</label><textarea class="finput"
+          <div class="fgroup"><label class="flbl">Message</label><textarea name="message" class="finput"
               placeholder="Tell me about your project..."></textarea></div>
           <button type="submit" class="fsub" id="sendBtn">
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
@@ -530,7 +538,7 @@
     <div class="foot-l">Sasikumar C &nbsp;·&nbsp; App Developer &nbsp;·&nbsp; Erode, TN &nbsp;·&nbsp; <em>© 2026</em>
     </div>
     <div class="foot-r">
-      <a href="mailto:sasikumarc02@gmail.com">Email</a>
+      <a href="mailto:sasikumarc.work@gmail.com">Email</a>
       <a href="https://github.com/Sasikumar27" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/sasikumar-c-225874212" target="_blank">LinkedIn</a>
       <a href="#hero">↑ Top</a>
@@ -538,6 +546,7 @@
   </footer>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 

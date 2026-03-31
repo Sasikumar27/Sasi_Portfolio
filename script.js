@@ -58,15 +58,77 @@ window.addEventListener('scroll', () => {
     nas.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + c));
 }, { passive: true });
 
+/* ── CUSTOM SELECT ── */
+const trigger = document.getElementById('selectTrigger');
+const dropdown = document.getElementById('selectDropdown');
+const options = document.querySelectorAll('.select-option');
+const subjectInput = document.getElementById('subjectInput');
+const selectDisplay = document.getElementById('selectDisplay');
+
+trigger.addEventListener('click', () => {
+    trigger.classList.toggle('active');
+    dropdown.classList.toggle('active');
+});
+
+options.forEach(option => {
+    option.addEventListener('click', () => {
+        const value = option.dataset.value;
+        const text = option.textContent;
+        
+        subjectInput.value = value;
+        selectDisplay.textContent = text || 'Select a subject';
+        
+        options.forEach(o => o.classList.remove('selected'));
+        option.classList.add('selected');
+        
+        trigger.classList.remove('active');
+        dropdown.classList.remove('active');
+    });
+});
+
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.custom-select')) {
+        trigger.classList.remove('active');
+        dropdown.classList.remove('active');
+    }
+});
+
 /* ── FORM ── */
+if (typeof emailjs !== 'undefined') {
+    emailjs.init('e94y-kNpwNntPKnJM');
+}
+
 function doSubmit(e) {
     e.preventDefault();
     const b = document.getElementById('sendBtn');
-    b.textContent = 'Sending…'; b.disabled = true;
-    setTimeout(() => {
-        document.getElementById('fOk').style.display = 'block';
-        b.innerHTML = 'Sent ✓'; b.style.background = '#16a34a';
-    }, 1200);
+    const form = document.getElementById('cForm');
+
+    b.textContent = 'Sending…';
+    b.disabled = true;
+
+    emailjs.sendForm('service_tgx55ea', 'template_drdpx3l', form)
+        .then(() => {
+            document.getElementById('fOk').style.display = 'block';
+            b.innerHTML = 'Sent ✓';
+            b.style.background = '#16a34a';
+            form.reset();
+            setTimeout(() => {
+                b.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>Send Message';
+                b.style.background = '';
+                b.disabled = false;
+                document.getElementById('fOk').style.display = 'none';
+            }, 3000);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            b.textContent = 'Error! Try again';
+            b.style.background = '#ef4444';
+            b.disabled = false;
+            setTimeout(() => {
+                b.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>Send Message';
+                b.style.background = '';
+            }, 2000);
+        });
 }
 
 /* ── THEME TOGGLE ── */

@@ -1310,6 +1310,22 @@ h2.stitle {
     appearance: none
 }
 
+/* Override browser autofill styling */
+.finput:-webkit-autofill,
+.finput:-webkit-autofill:hover,
+.finput:-webkit-autofill:focus,
+.finput:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px rgba(8, 12, 18, 0.8) inset !important;
+    -webkit-text-fill-color: #fff !important;
+    -webkit-transition: background-color 5000s ease-in-out 0s !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.finput:-webkit-autofill::first-line {
+    font-family: 'Outfit', sans-serif;
+    color: #fff !important;
+}
+
 .finput:focus {
     border-color: rgba(124, 111, 255, .4)
 }
@@ -1321,6 +1337,146 @@ h2.stitle {
 textarea.finput {
     resize: none;
     height: 118px
+}
+
+select.finput option {
+    background: #080c12;
+    color: #fff;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+select.finput option:hover {
+    background: #0c1020;
+}
+
+select.finput option:checked {
+    background: #7c6fff;
+    color: #fff;
+}
+
+/* ─── CUSTOM SELECT ─── */
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(255, 255, 255, .025);
+    border: 1px solid rgba(255, 255, 255, .065);
+    border-radius: 8px;
+    padding: 13px 15px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .55);
+    cursor: pointer;
+    transition: border-color .2s, background .2s;
+    font-family: 'Outfit', sans-serif;
+}
+
+.select-trigger:hover {
+    background: rgba(255, 255, 255, .04);
+}
+
+.select-trigger.active {
+    border-color: rgba(124, 111, 255, .4);
+    background: rgba(255, 255, 255, .035);
+}
+
+.select-trigger svg {
+    width: 12px;
+    height: 8px;
+    transition: transform .2s;
+    flex-shrink: 0;
+}
+
+.select-trigger.active svg {
+    transform: rotate(180deg);
+}
+
+.select-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: #0b0f18;
+    border: 1px solid rgba(124, 111, 255, .2);
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .6);
+    overflow: hidden;
+}
+
+.select-dropdown.active {
+    display: block;
+}
+
+.select-option {
+    padding: 12px 15px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, .7);
+    transition: all .15s;
+    font-size: 14px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.select-option:hover {
+    background: rgba(124, 111, 255, .15);
+    color: #7c6fff;
+}
+
+.select-option.selected {
+    background: rgba(124, 111, 255, .25);
+    color: #a78bfa;
+    font-weight: 500;
+}
+
+.select-option:first-child {
+    color: rgba(255, 255, 255, .35);
+}
+
+/* Light theme */
+body.light .select-trigger {
+    background: rgba(0, 0, 0, .04);
+    border-color: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .55);
+}
+
+body.light .select-trigger:hover {
+    background: rgba(0, 0, 0, .06);
+}
+
+body.light .select-trigger.active {
+    border-color: rgba(124, 111, 255, .4);
+    background: rgba(0, 0, 0, .08);
+}
+
+body.light .select-dropdown {
+    background: #f8f9fc;
+    border-color: rgba(124, 111, 255, .15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .1);
+}
+
+body.light .select-option {
+    color: rgba(0, 0, 0, .7);
+}
+
+body.light .select-option:hover {
+    background: rgba(124, 111, 255, .1);
+    color: #7c6fff;
+}
+
+body.light .select-option.selected {
+    background: rgba(124, 111, 255, .15);
+    color: #6d28d9;
+}
+
+body.light .select-option:first-child {
+    color: rgba(0, 0, 0, .35);
 }
 
 .frow {
@@ -1848,9 +2004,30 @@ body.light .finput:focus {
     border-color: rgba(124, 111, 255, 0.45)
 }
 
+body.light .finput:-webkit-autofill,
+body.light .finput:-webkit-autofill:hover,
+body.light .finput:-webkit-autofill:focus,
+body.light .finput:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #f8f9fc inset !important;
+    -webkit-text-fill-color: #0f172a !important;
+    -webkit-transition: background-color 5000s ease-in-out 0s !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
 body.light select.finput option {
     background: #fff;
-    color: #0f172a
+    color: #0f172a;
+    padding: 8px;
+}
+
+body.light select.finput option:hover {
+    background: #f5f6fa;
+    color: #7c6fff;
+}
+
+body.light select.finput option:checked {
+    background: linear-gradient(#7c6fff, #7c6fff);
+    color: #fff;
 }
 
 /* footer light */

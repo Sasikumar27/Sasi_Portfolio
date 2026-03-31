@@ -1101,10 +1101,37 @@ h2.stitle {
     pointer-events: none
 }
 
+.plbtn.disabled {
+    opacity: .35;
+    pointer-events: none;
+    background: rgba(251, 191, 36, .08);
+    border-color: rgba(251, 191, 36, .15);
+    color: #fbbf24
+}
+
+/* Coming Soon Card */
+.pcard-soon {
+    display: none;
+    border: 1px dashed rgba(124, 111, 255, .2);
+    opacity: .8
+}
+
+.pcard-soon .pnum {
+    color: rgba(124, 111, 255, .4)
+}
+
+.pcard-soon .pname {
+    color: rgba(255, 255, 255, .65)
+}
+
+.pcard-soon .ptagline {
+    color: rgba(124, 111, 255, .35)
+}
+
 /* featured inner grid */
 .feat-inner {
     display: grid;
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: 1fr 1.3fr;
     gap: 44px;
     align-items: center
 }
@@ -1141,13 +1168,36 @@ h2.stitle {
 }
 
 /* ─── IMAGE GALLERY ─── */
-.img-gallery {
+.img-gallery-bold {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     align-items: center;
+    justify-content: center
+}
+
+.img-gallery-bold img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(124, 111, 255, 0.2);
+    object-fit: cover;
+    max-height: 520px;
+    transition: transform .3s, box-shadow .3s
+}
+
+.img-gallery-bold img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 28px 80px rgba(124, 111, 255, 0.3)
+}
+
+.img-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap
+    flex-wrap: nowrap
 }
 
 .img-gallery img {
@@ -1406,8 +1456,26 @@ footer {
         grid-template-columns: 1fr
     }
 
+    .pcard-soon {
+        display: none !important
+    }
+
     .pcard.feat .feat-inner {
         grid-template-columns: 1fr
+    }
+
+    .img-gallery-bold,
+    .img-gallery {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch
+    }
+
+    .img-gallery-bold img,
+    .img-gallery img {
+        max-height: 300px;
+        flex-shrink: 0;
+        scroll-snap-align: start
     }
 
     .hero-stats-strip {
@@ -1416,6 +1484,13 @@ footer {
 
     .frow {
         grid-template-columns: 1fr
+    }
+}
+
+/* DESKTOP - Show Coming Soon Card */
+@media(min-width:900px) {
+    .pcard-soon {
+        display: block
     }
 }
 
